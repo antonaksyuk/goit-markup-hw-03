@@ -29,6 +29,10 @@ body button:active {
   color: var(--background-color);
 }
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .navi-list a:hover,
 .navi-list a:focus {
   color: var(--hover-color);
@@ -56,13 +60,42 @@ body button:active {
   color: var(--hover-color);
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.main-navi {
+  display: flex;
+  align-items: center;
+}
+
 .navi-list {
+  display: flex;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   font-weight: 500;
   color: var(--main-color);
   list-style: none;
+
+  margin-left: 93px;
+  padding-left: 0;
+  height: 80px;
+
+  align-items: center;
+}
+
+.navi-list .navigation:not(:last-child) {
+  margin-right: 50px;
+}
+
+.item-nav.current {
+  color: var(--hover-color);
 }
 
 .navi-bar a {
@@ -77,11 +110,24 @@ body button:active {
 }
 
 .navi-bar {
+  display: flex;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
   list-style: none;
+}
+
+.navi-bar .contact:not(:last-child) {
+  margin-right: 50px;
 }
 
 .hero {
   background-color: #2f303a;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero .hero-name {
@@ -94,6 +140,9 @@ body button:active {
   font-weight: 900;
   text-transform: uppercase;
   color: #ffffff;
+
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .hero .hero-orderbutton {
@@ -104,22 +153,95 @@ body button:active {
   line-height: 1.6;
   background-color: var(--hover-color);
   color: #ffffff;
+
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: hidden;
+
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }
 
-.skils-main {
+.skills {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.skills .container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.skills-main {
   list-style: none;
+
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+}
+
+.skills-item {
+  margin-right: 30px;
+}
+
+.skills-item:last-child {
+  margin-right: 0;
 }
 
 .skills-list {
-  font-style: 700;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
   color: var(--main-color);
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.skills-content {
+  margin: 0;
+}
+
+.works {
+  padding-bottom: 94px;
+}
+
+.works .container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  display: flex;
 }
 
 .works-list {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.works-list .works-item {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+.works-item:last-child {
+  margin-right: 0;
 }
 
 .works .our-works,
@@ -130,28 +252,125 @@ body button:active {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-color);
+
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .team {
   background-color: #f5f4fa;
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team .container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  display: flex;
 }
 
 .team-list {
   list-style: none;
+
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
-.team .bio {
+.team-list .team-item {
+  margin-right: 30px;
+  margin-left: 0;
+  padding: 0;
+
+  background-color: var(--background-color);
+}
+
+.team-item:last-child {
+  margin-right: 0;
+}
+
+.team-item .bio {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 60px;
+  padding-left: 59px;
+  align-items: center;
+  text-align: center;
+}
+
+.team .bio-name {
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   color: var(--main-color);
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
+
 .team .bio-post {
   font-family: Roboto;
   line-height: 1.2;
   letter-spacing: 0.03em;
   font-size: 16px;
+
+  margin: 0;
+}
+
+.projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.invisible {
+  display: none;
+}
+
+.projects .container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.project-buttons .button {
+  margin-right: 8px;
+}
+
+.project-buttons .button:last-child {
+  margin-right: 0;
+}
+
+.filter-button,
+.filter-button-all {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: hidden;
+  border-color: #f5f4fa;
+  background-color: rgba(245, 244, 250, 1);
+  cursor: pointer;
 }
 
 .project-name {
@@ -161,6 +380,10 @@ body button:active {
   line-height: 1.7;
   letter-spacing: 0.06em;
   color: var(--main-color);
+
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
 }
 
 .project-type {
@@ -172,18 +395,85 @@ body button:active {
   text-align: left;
   font-family: Roboto;
   color: var(--secodary-color);
+
+  margin: 0;
+  padding: 0;
 }
 
 .project-buttons {
   list-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 00.03em;
+  color: var(--background-color);
+
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+}
+
+.project-buttons .filter-button-all {
+  color: var(--background-color);
+  background-color: var(--hover-color);
+}
+
+.container-portfolio {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 3-30px);
 }
 
 .project-list {
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+}
+
+.project-list .project-all {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.project-all:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.project-all:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.project-all .container-item {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer {
   background-color: #2f303a;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  display: block;
 }
 
 .adress {
@@ -211,6 +501,15 @@ body button:active {
 
 .footer-navi {
   list-style: none;
+
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.footer-navi .footer-contact {
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 .footer-navi a:hover,
