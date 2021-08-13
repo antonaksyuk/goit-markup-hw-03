@@ -38,7 +38,21 @@ body button:active {
   color: var(--hover-color);
 }
 
-.web {
+.main-navi .web-header {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--hover-color);
+
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  margin: 0;
+}
+
+.footer .web-footer {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -46,6 +60,7 @@ body button:active {
   letter-spacing: 0.03em;
   color: var(--hover-color);
 }
+
 .studio-black {
   font-family: Raleway;
   font-weight: 700;
@@ -60,7 +75,7 @@ body button:active {
   color: var(--hover-color);
 }
 
-.container {
+.header .container {
   display: flex;
   align-items: center;
   width: 1200px;
@@ -85,9 +100,16 @@ body button:active {
 
   margin-left: 93px;
   padding-left: 0;
-  height: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   align-items: center;
+}
+
+.navi-list.item-nav {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .navi-list .navigation:not(:last-child) {
@@ -169,6 +191,15 @@ body button:active {
   cursor: pointer;
 }
 
+/* скрытие заголовка */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+}
+
 .skills {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -194,6 +225,7 @@ body button:active {
 
 .skills-item {
   margin-right: 30px;
+  width: 270px;
 }
 
 .skills-item:last-child {
@@ -212,6 +244,14 @@ body button:active {
 }
 
 .skills-content {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: left;
+
   margin: 0;
 }
 
@@ -238,6 +278,12 @@ body button:active {
 .works-list .works-item {
   margin-left: 0;
   margin-right: 30px;
+}
+
+.works-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .works-item:last-child {
@@ -296,8 +342,8 @@ body button:active {
 .team-item .bio {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 60px;
-  padding-left: 59px;
+  padding-right: 32px;
+  padding-left: 32px;
   align-items: center;
   text-align: center;
 }
@@ -327,19 +373,11 @@ body button:active {
   padding-bottom: 94px;
 }
 
-.invisible {
-  display: none;
-}
-
 .projects .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  margin-bottom: 50px;
-
-  display: flex;
-  justify-content: center;
 }
 
 .project-buttons .button {
@@ -400,7 +438,7 @@ body button:active {
   padding: 0;
 }
 
-.project-buttons {
+.projects .project-buttons {
   list-style: none;
   font-weight: 500;
   font-size: 16px;
@@ -409,25 +447,16 @@ body button:active {
   color: var(--background-color);
 
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
+  margin-bottom: 50px;
 }
 
 .project-buttons .filter-button-all {
   color: var(--background-color);
   background-color: var(--hover-color);
-}
-
-.container-portfolio {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: calc(100% / 3-30px);
 }
 
 .project-list {
@@ -443,6 +472,14 @@ body button:active {
 .project-list .project-all {
   margin-right: 30px;
   margin-bottom: 30px;
+
+  width: 370px;
+
+  border: 1px solid #eeeeee;
+}
+
+.project-all img {
+  display: block;
 }
 
 .project-all:nth-child(3n + 3) {
@@ -476,17 +513,19 @@ body button:active {
   display: block;
 }
 
-.adress {
+.footer-contact .adress {
   font-style: normal;
 }
 
-.adress {
+.footer-contact .adress {
   font-family: Roboto;
   line-height: 1.5;
   text-align: left;
   letter-spacing: 0.03em;
   font-size: 14px;
   color: #ffffff;
+
+  margin: 0%;
 }
 
 .footer-navi a {
