@@ -470,6 +470,8 @@ body button:active {
 }
 
 .project-list .project-all {
+  background-color: var(--background-color);
+
   margin-right: 30px;
   margin-bottom: 30px;
 
