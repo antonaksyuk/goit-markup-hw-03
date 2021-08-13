@@ -515,9 +515,6 @@ body button:active {
 
 .footer-contact .adress {
   font-style: normal;
-}
-
-.footer-contact .adress {
   font-family: Roboto;
   line-height: 1.5;
   text-align: left;
@@ -540,6 +537,7 @@ body button:active {
 
 .footer-navi {
   list-style: none;
+  font-style: normal;
 
   margin: 0;
   margin-top: 20px;
